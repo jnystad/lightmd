@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Light Markdown Editor</title>
+
+        <script type="text/javascript" src="lib/jquery-2.1.0.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="lib/ace.js" charset="utf-8"></script>
+        <script type="text/javascript" src="lib/markdown.js" charset="utf-8"></script>
+        <script type="text/javascript" src="tab.js" charset="utf-8"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href='icons.css' rel='stylesheet' type='text/css'>
+        <link href='tab.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="nav">
+            <div class="row">
+                <a href="tab.html" id="home"><img src="icon38_trans.png" alt="Light Markdown Editor"></a>
+                <a href="#" id="save" accesskey="s" title="(Alt + Shift + S)"><i class="icon icon-disk"></i> <span>Save .md</span></a>
+                <a href="#" id="clear"><i class="icon icon-remove"></i> <span class="hide-sm">Clear</span></a>
+            </div>
+            <div class="row">
+                <a href="#" id="slot1" class="slot active">1</a>
+                <a href="#" id="slot2" class="slot">2</a>
+                <a href="#" id="slot3" class="slot">3</a>
+                <a href="#" id="slot4" class="slot">4</a>
+            </div>
+            <div class="row pull-right">
+                <a href="#" id="export" accesskey="e" title="(Alt + Shift + E)"><i class="icon icon-html"></i> <span class="hide-sm">Export to HTML</span></a>
+                <a href="#" id="print" accesskey="p" title="(Alt + Shift + P)"><i class="icon icon-print"></i> <span class="hide-sm">Print</span></a>
+            </div>
+            <div class="row">
+                <label>CSS<span class="hide-md"> style</span>:
+                <select id="cssStyle">
+                    <option value="none">None</option>
+                    <option value="md-github.css" selected>GitHub (inspired)</option>
+                    <option value="md-lightmd.css">lightmd</option>
+                </select>
+                <a href="#" id="saveCss"><i class="icon icon-disk"></i></a>
+                </label>
+            </div>
+        </div>
+
+        <div id="editor">
+            <div id="left">
+                <div id="md">
+                    <h2>Markdown</h2>
+                    <div id="mdTextarea" class="textarea"></div>
+                </div>
+            </div>
+
+            <div id="right">
+                <iframe id="output" src="about:blank">
+                </iframe>
+            </div>
+        </form>
+
+        <!-- Used to download files that normally would open in the browser -->
+        <a id="dummylink" href="about:blank"></a>
+    </body>
+</html>
